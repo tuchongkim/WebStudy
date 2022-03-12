@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>상품 소개 페이지</title>
+  <style>
+    table, th, td {
+      border:1px solid #ccc;
+      border-collapse: collapse;
+    }
+    th, td { padding:10px 20px; }
+  </style>
+</head>
+<body>
+  <h1>레드향</h1>
+  <hr>
+  <h2>레드향 샐러드 레시피</h2>
+  <hr>
+  <h2>상품 구성</h2>
+  <table>
+    <caption>선물용과 가정용 상품 구성</caption>
+    <colgroup>
+      <col style="background-color:#eee;">
+      <col>
+      <col span="2" style="width:150px">
+      <!-- span 속성을 사용해 합치기 전
+        <col style="width:150px">
+        <col style="width:150px">
+      -->
+    </colgroup>
+    <thead>
+      <tr>
+        <th>용도</th>
+        <th>중량</th>
+        <th>갯수</t>
+        <th>가격</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">선물용</td>
+        <td>3kg</td>
+        <td>11~16과</td>
+        <td>35,000원</td>
+      </tr>
+      <tr>
+        <td>5kg</td>
+        <td>18~26과</td>
+        <td>52,000원</td>
+      </tr>
+      <tr>
+        <td rowspan="2">가정용</td>
+        <td>3kg</td>
+        <td>11~16과</td>
+        <td>30,000원</td>
+      </tr>   
+      <tr>
+        <td>5kg</td>
+        <td>18~26과</td>
+        <td>47,000원</td>
+      </tr>
+    </tbody>        
+  </table>
+</body>
+</html>
+
+
+
+
+
+<!-- 표 만들기
+1. 표의 구성 요소 : 행row 열column 셀cell(행과 열이 만나 이루어지는 곳)
+  -> 표를 만들기 위해서는 표 태그, 행 태그, 열 태그 가 필요
+2. <table></table> : 표의 시작과 끝을 알려주는 태그, <table> 바로 아랫줄에 <caption></caption> 태그를 통해 제목 설정 가능
+3. <tr></tr> : 행을 만드는 태그, 아래에 <td></td>, <th></th> 태그를 이용해 셀 만들기
+  -> 표의 제목 행에 셀을 만들 경우 <th></th> 태그 사용 : 진하게 표시, 셀 안 중앙 배열
+  -> 하나의 셀을 만들기 위해서는 <table>, <tr>, <td> 태그가 모두 모여야 함
+
+4. 표의 구조를 지정하는 <thead></thead> : 제목 / <tbody></tbody> : 본문 / <tfoot></tfoot> : 요약
+  -> 요약 부분에 합계나 요약 내용 표시
+  -> CSS를 통해 표의 제목, 본문, 요약에 각각 다른 스타일 적용 가능
+  -> 자바스크립트를 이용해 thead와 tfoot 영역은 고정하고 tbody 태그만 스크롤하도록 만들 수 있음
+
+5. 행이나 열을 합치는 rowspan, colspan
+  -> 행이나 열을 합치는 것은 결국 셀을 합치는 것. 따라서 <td></td> 또는 <th></th> 에서 rowspan, colspan 사용
+  -> <td rowspan="합칠 셀의 개수">셀의 내용</td> : 행 합치기
+     <td colspan="합칠 셀의 개수">셀의 내용</td> : 열 합치기
+
+6. 열을 묶어 주는 <col>, <colgroup></colgroup>
+  -> 특정 열에 배경색을 넣거나 너비를 바꾸는 등 특정 열을 선택해야 할 때 사용
+  -> 위의 태그들은 반드시 <caption></caption> 태그 다음에 써야 함. 표의 내용이 시작되기 전 스타일 적용
+  -> <col> 태그를 사용할 때는 반드시 <colgroup></colgroup> 태그 안에 <col> 태그를 포함해 전체 열의 개수 만큼 <col> 태그 작성
+  -> 스타일 속성이 같은 열들은 span을 이용해 묶을 수 있음
+  -> 사용 예시 :
+  <colgroup>
+    <col style="색이나 너비 등 스타일 지정">
+    <col>
+    <col span="2" style="색이나 너비 등 스타일 지정"> 
+  </colgroup> -->
+

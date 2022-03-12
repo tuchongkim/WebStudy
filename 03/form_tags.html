@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>레드향 주문하기</title>
+  <link rel="stylesheet" href="css/order2.css">
+  <style>
+    hr {
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>여러 데이터 나열하기</h1>
+    <form action="">  
+      <!-- 드롭 다운 목록 -->
+      <label for="prod1">상품 선택</label>
+      <select id="prod1">
+        <option value="special_3" selected>선물용 3kg</option>
+        <option value="special_5">선물용 5kg</option>
+        <option value="family_3">가정용 3kg</option>
+        <option value="family_5">가정용 5kg</option>
+      </select>
+      <hr>    
+      <!-- 데이터 목록 -->
+      <label for="prod2">포장 여부 </label>
+      <input type="text" id="prod2" list="pack">
+      <datalist id="pack">
+        <option value="package">선물 포장</option>
+        <option value="no_package">포장 안 함</option>
+      </datalist>        
+    </form>
+    <h1>레드향 주문하기</h1>
+    <form>
+      <fieldset>
+        <legend>상품 선택</legend>
+        <p><b>주문할 상품을 선택해 주세요.</b></p>
+        <ul id="product">
+          <li>
+            <label><input type="checkbox" value="s_3">선물용 3kg</label>
+            <input type="number" min="0" max="5">개 <small>(최대 5개)</small>
+          </li>
+          <li>
+            <label><input type="checkbox" value="s_5">선물용 5kg</label>
+            <input type="number" min="0" max="3" value="1">개 <small>(최대 3개)</small>
+          </li>
+          <li>
+            <label><input type="checkbox" value="f_3">가정용 3kg</label>
+            <input type="number" min="0" max="5">개 <small>(최대 5개)</small>
+          </li>
+          <li>
+            <label><input type="checkbox" value="f_5">가정용 5kg</label>
+            <input type="number" min="0" max="3">개 <small>(최대 3개)</small>
+          </li>
+        </ul>      
+        <p><b>포장 선택</b></p>
+        <ul>
+          <li><label><input type="radio" value="yes">선물 포장</label></li>
+          <li><label><input type="radio" value="no">선물 포장 안 함</label></li>
+        </ul>    
+      </fieldset>
+      <fieldset>
+        <legend>배송 정보</legend>
+        <ul id="shipping">
+          <li>
+            <label for="user-name">이름 </label>
+            <input type="text" id="user-name">
+          </li>
+          <li>
+            <label for="addr">배송 주소</label>
+            <input type="text" id="addr">
+          </li>
+          <li>
+            <label for="mail">이메일</label>
+            <input type="email" id="mail">
+          </li>        
+          <li>
+            <label for="phone">연락처</label>
+            <input type="tel" id="phone">
+          </li>
+          <li>
+            <label for="d-day">배송 지정</label>
+            <input type="date" id="d-day"> <small>(주문일로부터 최소 3일 이후)</small>
+          </li>     
+          <li>
+            <label for="memo">메모</label>
+            <textarea id="memo" cols="40" rows="4"></textarea>
+          </li>   
+        </ul>  
+      </fieldset>
+      <div>
+        <button type="submit">주문하기</button>
+        <button type="reset">취소하기</button>
+      </div>
+      <!-- input 태그를 이용하는 방법 
+      <div>
+        <input type="submit" value="주문하기"> 
+        <input type="reset" value="취소하기">
+      </div>           -->
+    </form>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+<!-- 폼에서 사용하는 여러 태그들
+
+1. <textarea></textarea> : 여러줄을 입력하는 텍스트 영역
+  -> cols 속성 : 너비 지정(문자 단위), 영문자 기준 (한글 1글자는 영문 2글자에 해당)
+  -> rows 속성 : 텍스트 영역의 세로 길이를 줄 단위로 지정. 지정한 숫자보다 줄 개수가 많아지면 스크롤 생성
+
+2. 
+<select>
+  <option value="값1">항목 1</option>
+  <option value="값2">항목 2</option>
+</select>
+: 드롭 다운 목록, 사용자가 내용을 직접 입력하지 않고 여러 옵션 중에서 선택
+  -> select 태그의 속성들
+      1. size : 화면에 표시할 드롭다운 항목의 개수 지정
+      2. multiple : 드롭다운 목록에서 둘 이상의 항목을 선택할 떄 사용
+  -> option 태그의 속성들
+      1. value : 해당 항목을 선택할 때 서버로 넘겨줄 값 지정
+      2. selected : 드롭다운 메뉴를 삽입할 때 기본적으로 선택해서 보여 줄 항목 지정
+
+3.
+<input type="text" list="데이터 목록 id">
+<datalist id="데이터 목록 id">
+  <option value="서버로 넘길 값1(화면에도 표시)">선택 옵션 1</option>
+  <option value="서버로 넘길 값2(화면에도 표시)">선택 옵션 2</option>
+</datalist>
+: 데이터 목록
+
+4. <button></button> : input 태그의 버튼과 비슷해 보이지만 button 태그는 폼을 전송하거나 리셋하는 버튼 삽입 가능
+<button type="submit">내용</button>
+<button type="reset">내용</button>
+<button type="button">내용</button>
+-> type은 submit, reset, button 중에서 선택. 선택하지 않을 경우 submit으로 간주 
+-> button 태그에는 콘텐츠를 포함할 수 있어서 아이콘을 추가하거나 CSS를 이용하여 원하는 형태로 꾸밀 수 있음 -->
