@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>블록 레벨과 인라인 레벨</title>
+		<style>
+			body  * {
+				border:1px solid blue;
+			}
+			.accent {
+				color:red;
+				font-weight:bold;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>시간이란...</h1>
+		<div>내일 죽을 것처럼 <p class="accent">오늘</p>을 살고 </div>
+		<p>영원히 살 것처럼 <br>내일을 꿈꾸어라. </p>
+		<h1>시간이란...</h1>
+		<div>내일 죽을 것처럼 <span class="accent">오늘</span>을 살고 </div>
+		<p>영원히 살 것처럼 <br>내일을 꿈꾸어라. </p>		  
+</body>
+</html>
+
+
+
+
+
+
+<!-- 
+CSS와 박스모델
+
+** 박스모델 : 웹 문서의 내요을 박스 형태로 정의하는 방법
+-> 블록 레벨 요소인지, 인라인 레벨 요소인지에 따라 나열 방법이 달라짐
+
+1. 블록레벨 요소
+: 태그를 사용해 요소를 삽입했을 때 혼자 한 줄을 차지하는 것 (=너비 100%)
+ex) <h1></h1> , <div></div>, <p></p>
+
+2. 인라인 레벨 요소
+: 한 줄을 차지하지 않는 요소. 한 줄에 여러개의 인라인 레벨 요소를 표시할 수 있음.
+ex) <span></span>, <img>, <strong></strong>
+
+ -->
+
