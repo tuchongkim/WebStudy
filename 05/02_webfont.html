@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>웹 폰트 사용하기</title>
+    <style>
+      @font-face { /* 웹 폰트 정의 부분 */
+        font-family: 'Ostrich';  /* 폰트 이름 */
+        src: local('Ostrich Sans'), /* 현재 시스템에 해당 글꼴이 있는지 확인 */
+              url('fonts/ostrich-sans-bold.woff') format('woff'), /* woff(web open font family) */
+              url('fonts/ostrich-sans-bold.ttf') format('truetype'), /* truetype(컴퓨터에서 사용하는 기본 글꼴, 파일 크기가 큼) */
+              url('fonts/ostrich-sans-bold.svg') format('svg');
+      }
+      .wfont {
+        font-family:'Ostrich', sans-serif; /* 웹 폰트 지정 */
+      }
+      p {
+        font-size:30px; /* 글자 크기 */
+      }
+    </style>
+</head>
+<body>
+  <p>Using Default Fonts</p>  <!-- 브라우저 기본 글꼴 -->
+  <p class="wfont">Using Web Fonts</p>  <!-- 웹 폰트 -->
+</body>
+</html>
