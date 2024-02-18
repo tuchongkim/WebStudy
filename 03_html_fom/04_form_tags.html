@@ -13,7 +13,8 @@
 <body>
   <div id="container">
     <h1>여러 데이터 나열하기</h1>
-    <form action="">  
+    <!-- 첫번째 form 예시 -->
+    <form action="">
       <!-- 드롭 다운 목록 -->
       <label for="prod1">상품 선택</label>
       <select id="prod1">
@@ -32,6 +33,7 @@
       </datalist>        
     </form>
     <h1>레드향 주문하기</h1>
+    <!-- 두번째 form 예시 -->
     <form>
       <fieldset>
         <legend>상품 선택</legend>
@@ -89,6 +91,7 @@
           </li>   
         </ul>  
       </fieldset>
+      <!-- button 태그를 이용한 버튼 삽입 -->
       <div>
         <button type="submit">주문하기</button>
         <button type="reset">취소하기</button>
@@ -111,8 +114,8 @@
 <!-- 폼에서 사용하는 여러 태그들
 
 1. <textarea></textarea> : 여러줄을 입력하는 텍스트 영역
-  -> cols 속성 : 너비 지정(문자 단위), 영문자 기준 (한글 1글자는 영문 2글자에 해당)
-  -> rows 속성 : 텍스트 영역의 세로 길이를 줄 단위로 지정. 지정한 숫자보다 줄 개수가 많아지면 스크롤 생성
+  a. cols 속성 : 너비 지정(문자 단위), 영문자 기준 (한글 1글자는 영문 2글자에 해당)
+  b. rows 속성 : 텍스트 영역의 세로 길이를 줄 단위로 지정. 지정한 숫자보다 줄 개수가 많아지면 스크롤 생성
 
 2. 
 <select>
@@ -120,12 +123,12 @@
   <option value="값2">항목 2</option>
 </select>
 : 드롭 다운 목록, 사용자가 내용을 직접 입력하지 않고 여러 옵션 중에서 선택
-  -> select 태그의 속성들
-      1. size : 화면에 표시할 드롭다운 항목의 개수 지정
-      2. multiple : 드롭다운 목록에서 둘 이상의 항목을 선택할 떄 사용
-  -> option 태그의 속성들
-      1. value : 해당 항목을 선택할 때 서버로 넘겨줄 값 지정
-      2. selected : 드롭다운 메뉴를 삽입할 때 기본적으로 선택해서 보여 줄 항목 지정
+  a. select 태그의 속성들
+      a-1. size : 화면에 표시할 드롭다운 항목의 개수 지정
+      a-2. multiple : 드롭다운 목록에서 둘 이상의 항목을 선택할 떄 사용
+  b. option 태그의 속성들
+      b-1. value : 해당 항목을 선택할 때 서버로 넘겨줄 값 지정
+      b-2. selected : 드롭다운 메뉴를 삽입할 때 기본적으로 선택해서 보여 줄 항목 지정
 
 3.
 <input type="text" list="데이터 목록 id">
@@ -135,9 +138,12 @@
 </datalist>
 : 데이터 목록
 
-4. <button></button> : input 태그의 버튼과 비슷해 보이지만 button 태그는 폼을 전송하거나 리셋하는 버튼 삽입 가능
+4. 
+<button></button>
 <button type="submit">내용</button>
 <button type="reset">내용</button>
 <button type="button">내용</button>
--> type은 submit, reset, button 중에서 선택. 선택하지 않을 경우 submit으로 간주 
--> button 태그에는 콘텐츠를 포함할 수 있어서 아이콘을 추가하거나 CSS를 이용하여 원하는 형태로 꾸밀 수 있음 -->
+: 버튼(<button>) 태그
+  a. input 태그의 버튼과 비슷해 보이지만 button 태그는 폼을 전송하거나 리셋하는 버튼 삽입 가능
+  b. type은 submit, reset, button 중에서 선택. 선택하지 않을 경우 submit으로 간주 
+  c. button 태그에는 콘텐츠를 포함할 수 있어서 아이콘을 추가하거나 CSS를 이용하여 원하는 형태로 꾸밀 수 있음 -->
