@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>박스모델</title>
+	<style>
+		div {
+			width: 200px;
+			height: 100px;
+			display: inline-block;
+			margin: 15px;
+			border: 1px solid blue;
+			border-radius: 20px;
+		}
+		.box1{ box-shadow: 2px -2px 5px 0px; }  /* 오른쪽 윗부분에 그림자 */
+		.box2{ box-shadow: 5px 5px 15px 5px blue; }  /* 오른쪽 아랫부분에 파란색 그림자 */
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+</body>
+</html>
+
+<!-- 
+CSS와 박스모델
+
+5. box-shadow: <수평 거리> <수직 거리> <흐림 정도> <번짐 정도> <색상> inset
+	a. 박스 모델에 그림자 효과를 주는 box-shadow
+  b. 그림자의 위치는 수평 거리와 수직 거리의 값에 따라 움직인다.
+	c. 속성값들
+			c-1. <수평 거리> : 그림자가 가로로 얼마나 떨어져 있는지를 나타낸다(양수=오른쪽, 음수=왼쪽). 필수 속성값.
+			c-2. <수직 거리> : 그림자가 세로로 얼마나 떨어져 있는지를 나타낸다(양수=아래쪽, 음수=위쪽). 필수 속성값.
+			c-3. <흐림 정도> : 0(기본값, 진한 그림자), 값이 커질수록 부드러운 그림자(higher is smooother). 음수값 사용 불가.
+			c-4. <번짐 정도> : 양수값(모든 방향으로 그림자가 퍼짐), 음수값(모든 방향으로 그림자가 축소). 0(기본값).
+			c-5. <색상> : 한가지만 지정할 수도 있고, 공백으로 구분하여 여러 개의 색상 지정 가능. 검은색(기본값).
+			c-6. inset : 이 키워드를 표시하면 안쪽 그림자로 표시
+
+ -->
