@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>박스모델 - 마진</title>
+	<style>
+    div {
+      width: 200px;
+      height: 100px;
+      display: inline-block;
+      border: 1px solid #222;
+    }
+    #margin1 {
+      margin: 50px;  /* 4방향 모두 50px */
+    }
+    #margin2 {
+      margin: 30px 50px  /* top&bottom: 30px, right&left: 50px */
+    }
+    #margin3 {
+      margin: 30px 20px 50px  /* top: 30px, right&left: 20px, bottom: 50px */
+    }
+    #margin4 {
+      margin: 30px 50px 30px 50px;  /* top: 30px, right: 50px, bottom: 30px, left: 50px */
+    }
+    #margin5{
+      margin-right: 20px;  /* right: 20px */
+    }
+	</style>
+</head>
+<body>
+  <div id="margin1"></div>
+  <div id="margin2"></div>
+  <div id="margin3"></div>
+  <div id="margin4"></div>
+  <div id="margin5"></div>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+여백을 조절하는 속성
+
+1. margin: 요소 주변의 여백을 설정하는 속성
+  a. 기본형
+      margin: <크기> | <백분율> | auto
+  b. 속성값
+      d-1. <크기> : 너빗값이나 높잇값을 px이나 em같은 단위와 함께 수치로 지정
+      d-2. <백분율> : 박스 모델을 포함한 부모 요소를 기준으로 너빗값이나 높잇값을 퍼센트(%)로 지정
+      d-3. auto : display 속성에서 지정한 값에 맞게 적절한 값을 자동으로 지정
+  c. 적용순서
+      c-1. 다른 속성들과 마찬가지로 박스 모델의 4개 방향에 대해 따로 지정해줄 수도 있다.
+      c-2. top -> right -> bottom -> left
+      c-3. 만약 2개만 입력한다면 top&bottom -> right&left
+      c-4. 만약 3개만 입력한다면 top -> right&left -> bottom
+
+ -->

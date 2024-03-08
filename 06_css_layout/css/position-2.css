@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;  /* 테두리까지 포함해서 너비값 지정 */
+  margin: 0;  /* 마진 0으로 초기화 */
+  padding: 0;  /* 패딩 0으로 초기화 */
+}  
+#contents {
+ background: url("../images/bg.jpg") no-repeat;
+ background-size: cover;
+ width: 800px;  /* contents의 너빗값 = 800px */
+ height: 500px;  /* contents의 높이 = 500px */
+ margin: 0 auto;  /* 위아래 마진 = 0, 좌우 마진 = auto */
+}
+h1 { 
+  color: #fff;  /* h1의 색상 지정 */
+  font-size: 120px;  /* 글자 크기 120px */
+  text-shadow: 2px 3px 0 #000;  /* 글자 그림자: 오른쪽(2px), 아래쪽(3px), 번짐정도(0px), 색상(검은색) */
+}

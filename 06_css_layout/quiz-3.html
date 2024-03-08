@@ -1,0 +1,42 @@
+﻿<!-- 
+연습문제 3
+
+"quiz-3.html"에는 순서 없는 목록이 있습니다. 목록에는 항목이 4개 있는데 다음
+조건에 맞는 CSS를 적용해 가로 내비게이션 메뉴를 만드세요. 메뉴 항목 위로 마우스
+포인터를 올렸을 때 글자색과 배경색이 바뀌는 CSS 소스는 미리 작성되어 있습니다.
+
+조건
+1. ul 요소의 불릿을 없앱니다.
+2. 목록의 각 항복인 li 요소는 왼쪽으로 플로팅합니다.
+3. 링크 요소인 a는 display속성을 bolck으로 지정하고 패딩을 10px 20px로 지정합니다.
+	 배경색을 회색(#ccc)으로 지정합니다.
+
+ -->
+
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>연습문제 3</title>
+		<style>
+			a:link, a:visited {
+				color:black;
+				text-decoration: none;
+			}
+			a:hover {
+				background-color:#000;
+				color:#fff;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="#">메뉴1</a></li>
+				<li><a href="#">메뉴2</a></li>
+				<li><a href="#">메뉴3</a></li>
+				<li><a href="#">메뉴4</a></li>
+			</ul>
+		</nav>
+	</body>
+</html>

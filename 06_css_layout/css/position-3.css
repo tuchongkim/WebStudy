@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}  
+#contents {
+ background: url("../images/bg.jpg") no-repeat;
+ background-size: cover;
+ width: 800px;
+ height: 500px;
+ margin: 0 auto;
+ position: relative;  /* 포지셔닝 - relative, 아래 h1요소에서 absoulte을 사용하기 위해 지정 */
+}
+h1 { 
+  color: #fff; 
+  font-size: 120px;
+  text-shadow: 2px 3px 0 #000;      
+  position: absolute;
+  right: 100px;  /* 기준위치(#contents)로부터 오른쪽으로 100px */
+  bottom: 100px;  /* 기준위치(#contents)로부터 아래쪽으로 100px */
+}
