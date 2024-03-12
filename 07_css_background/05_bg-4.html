@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>배경 이미지</title>
+  <style>
+    #container{
+      width: 1100px;
+      margin: 50px auto;
+    }
+    .box{
+      float: left;
+      border: 1px solid #222;
+      width: 300px;
+      height: 300px;      
+      margin: 20px;
+      background: url('images/bg4.jpg') no-repeat left top;  /* background 속성 하나로 배경 이미지 제어 */
+    }
+    #bg1 { background-size: auto;}  /* 원래 배경 이미지 크기로 표시 */
+    #bg2 { background-size: 200px;}  /* 너비는 200px, 높이는 자동 계산 */
+    #bg3 { background-size: 50%;}  /* 배경 이미지 너비는 요소 너비의 50%, 높이는 자동 계산 */
+    #bg4 { background-size: 100% 100%;}  /* 배경 이미지 너비와 높이는 요소 너비의 100%, 요소 높이의 100% */ 
+    #bg5 { background-size: contain;}  /* 요소 안에 배경 이미지가 다 보이도록 표시 */
+    #bg6 { background-size: cover;}  /* 요소를 완전히 덮도록 배경 이미지 표시 */
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="box" id="bg1"></div>
+    <div class="box" id="bg2"></div>
+    <div class="box" id="bg3"></div>
+    <div class="box" id="bg4"></div>
+    <div class="box" id="bg5"></div>
+    <div class="box" id="bg6"></div>
+  </div>
+ </body>
+</html>
+
+
+
+
+
+<!-- 
+배경 이미지 지정하기
+
+6. background: 배경 이미지와 관련된 속성들을 하나로 제어
+  a. background-image, background-repeat, background-position, background-attachment 등을 한번에 제어
+  b. 각 속성들의 속성값들이 다르기 때문에 순서는 상관 X
+  c. example
+      c-1. background: url('imgages/bg4.png') no-repeat center bottom fixed;
+      c-2. no-repeat은 background-repeat의 속성값
+      c-3. center bottom은 background-position의 속성값
+      c-4. fixed는 background-attachment의 속성값
+
+7. background-size: 배경 이미지 크기를 조절하는 속성
+  a. 배경 이미지가 배경을 채울 요소보다 크거나 작을 경우 background-size로 이미지 크기를 조절
+  b. 속성값이 하나라면 그 값은 너비로 인식 - 높이는 원래 이미지의 너비와 높이 비율에 따라 자동 계산
+  c. 속성값
+      c-1. auto: 화면을 스크롤하면 이미지도 스크롤 됨. 기본값.
+      c-2. contain: 화면을 스크롤하면 배경 이미지는 고정되고 내용만 스크롤 됨.
+      c-3. cover: 배경 이미지로 요소를 모두 덮도록 이미지를 확대,축소.
+      c-4. <크기>: 이미지의 너비와 높이를 지정. 값이 하나만 주어질 경우 너비로 인식.
+      c-5. <백분율>: 배경 이미지가 들어갈 요소의 크기를 기준으로 백분율로 지정.
+
+ -->

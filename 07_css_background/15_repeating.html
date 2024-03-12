@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>그러데이션 반복</title>
+  <style>
+		div {
+			width: 500px;
+			height: 300px;
+			border: 1px solid #222;
+			border-radius: 10px;
+      margin-bottom: 30px;
+		}
+		.grad1 {
+			background: red; 
+			background: repeating-linear-gradient(yellow, red 20px);  /* 선형 그라데이션 반복(가로선) */ 
+		}
+		.grad2 {
+			background: #ccc; 
+			background: repeating-radial-gradient(circle, white, #ccc 10%);  /* 원형 그라데이션 반복 */ 
+		}
+		.grad3 {
+			background: red;
+			background: repeating-linear-gradient(to bottom right, yellow, red 20px);  /* 선형 그라데이션 반복(사선) */
+		}
+  </style>
+</head>
+<body>
+	<div class="grad1"></div>
+	<div class="grad2"></div>
+	<div class="grad3"></div>
+ </body>
+</html>
+
+
+
+
+
+<!-- 
+그라데이션 효과로 배경 꾸미기
+
+3. 그라데이션을 사용한 패턴
+  a. 선형 또는 원형 그라데이션을 반복하여 패턴을 생성할 수 있다.
+			a-1. repeating-linear-gradient: 선형 그라데이션 반복
+			a-2. repeating-radial-gradient: 원형 그라데이션 반복
+
+ -->

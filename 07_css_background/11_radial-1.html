@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>원형 그러데이션</title>
+  <style>
+		div {
+			width: 500px;
+			height: 300px;
+			margin: 10px;
+		}
+
+		/* 타원형 원형 그러데이션 */
+		.grad1{
+			background: red;
+			background: radial-gradient(white, yellow, red);  /* 타원형으로 흰색, 노란색, 빨간색으로 바뀌는 그러데이션 */
+		}
+
+		/* 원형 그러데이션 */
+		.grad2{
+			background: red;
+			background: radial-gradient(circle, white, yellow, red);  /* 원형으로 흰색, 노란색, 빨간색으로 바뀌는 그러데이션 */
+		}
+  </style>
+</head>
+<body>
+  <div class="grad1"></div>
+  <div class="grad2"></div>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+그라데이션 효과로 배경 꾸미기
+
+2. 원형 그라데이션
+  a. 원 또는 타원의 중심에서부터 동심원을 그리며 바깥 방향으로 색상이 바뀌는 그라데이션
+  b. 원형 그라데이션은 색상이 바뀌기 시작하는 원의 중심과 크기를 지정하고 그라데이션 모양을 선택.
+	c. radial-gradient() 함수를 통해 구현
+	d. 기본형
+		 radial-gradient(<모양> <크기> at <위치>, <색상 중지점>, [<색상 중지점>, ....]);
+	e. parameters
+			e-1. 모양: 원형(circle)과 타원형(eclipse) 중 하나를 선택.
+						(1) 기본값은 타원형.
+
+ -->

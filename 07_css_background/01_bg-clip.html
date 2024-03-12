@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>상품 소개 페이지</title>
+  <style>
+    .desc {
+      border: 5px dotted #222;
+      background-color: #ffd9a0;  /* 'desc' 클래스의 배경색 지정 */
+      width: 350px;
+      padding: 20px;
+      margin-right: 20px;
+      float: left;  /* 왼쪽에 떠 있게 */
+    }
+    #clip-border {
+      background-clip: border-box;  /* 테두리까지 배경 적용 */
+    }
+    #clip-padding {
+      background-clip: padding-box;  /* 패딩 범위까지 배경 적용 */
+    }
+    #clip-content {
+      background-clip: content-box;  /* 콘텐츠 영역에만 배경 적용 */
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="desc" id="clip-border">
+      <h1>레드향</h1>
+      <p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
+      <p>레드향은 <em>한라봉과 귤을 교배</em>한 것으로<br>일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+    </div>
+    <div class="desc" id="clip-padding">
+      <h1>레드향</h1>
+      <p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
+      <p>레드향은 <em>한라봉과 귤을 교배</em>한 것으로<br>일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+    </div>
+    <div class="desc" id="clip-content">
+      <h1>레드향</h1>
+      <p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
+      <p>레드향은 <em>한라봉과 귤을 교배</em>한 것으로<br>일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+    </div>        
+  </div>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+배경색과 배경 범위 지정하기
+
+1. background-color: 배경색을 지정하는 속성
+  a. 16진수, rgb값, 색상 이름을 상ㅇ해서 지정
+      a-1. 색상을 세밀하게 조정하고 싶다면 16진수 사용
+      a-2. 투명도를 함께 조절하고 싶다면 rgba 값 사용
+  b. 스타일 상속 예외
+      b-1. 다른 속성들과 다르게 background-color 속성은 스타일 상속이 되지 않음
+      b-2. 예를 들어 <body> 태그 선택자에 파란색 배경을 넣는다고 해서
+           <div>, <p> 등의 요소에 스타일 상속이 되는 것이 아니고
+           <div>, <p> 등의 요소가 기본적으로 투명하기 때문에 <body> 파란색 배경이 비치는 것.
+
+2. baockground-clip: 배경색의 적용 범위를 조절하는 속성
+  a. 배경을 넣고 싶은 요소마다 속성을 입력해도 되지만 background-clip을 통해 
+     박스 모델 관점에서 적용 범위를 조절할 수도 있다.
+  b. 속성값들
+      b-1. border-box: 박스 모델의 가장 외곽인 테두리까지 적용. 기본값.
+      b-2. padding-box: 박스 모델에서 테두리를 뺸 패딩 범위까지 적용.
+      b-3. content-box: 박스 모델에서 내용(콘텐츠) 부분에만 적용.
+
+ -->
