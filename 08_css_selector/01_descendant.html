@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>고급 선택자</title>
+  <style>
+    body {
+      background-color: #eee;
+    }
+    section {
+      width: 600px;
+      margin: 20px auto;
+    }
+    p {
+      width: 500px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      line-height: 2;
+    }
+   section p {  /* section 요소의 모든 하위 p 요소에 적용 */
+      color: blue;  /* 글자색을 파란색으로 */
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>예약 방법 & 사용 요금</h1>
+    <p>아직 온라인 예약 신청이 준비되어 있지 않습니다. <br>전화(xxx-xxxx-xxxx)로 문의 바랍니다.</p>
+    <div>
+      <p>가족실(2~4인) : 60,000원/일</p>
+      <p>도미토리(4인 공용) : 25,000원/일</p>
+  </section>   
+</body>
+</html>
+
+
+
+
+
+<!-- 
+연결 선택자
+
+1. 하위 선택자(descendent selector)
+  a. 상위 요소에 포함된 하위 요소 모두에 스타일을 적용하는 선택자.
+      a-1. 공백( )을 기준으로 상위요소와 하위요소를 구분
+  b. 기본형
+    상위요소 하위요소
+  c. 특정 요소를 기준으로 그 안에 포함된 요소를 하위 요소라고 함.
+      c-1. 현재 요소를 기준으로 한단계 바로 아래 요소 = 자식 요소
+      c-2. 자식 요소를 기준으로 한단계 아래 요소 = 손자 요소
+  d. 하위 선택자를 사용하면 부모 요소에 포함된 하위 요소를 모두 선택.
+      d-1. 여기서 하위 요소를 모두 선택한다는 뜻은 자식 요소 뿐만 아니라 손자요소, 손자의 손자요소 등까지 포함한다는 것.
+  e. example:
+      section p { ... }
+
+ -->

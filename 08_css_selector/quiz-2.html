@@ -1,0 +1,62 @@
+﻿<!-- 
+연습문제 2
+
+다음 조건에 맞는 메뉴 스타일을 추가하세요.
+
+조건
+1. 메뉴6의 오른쪽에 있는 테두리를 없앱니다.
+2. 메뉴6의 테두리를 없애고 나면 메뉴 전체 너비가 길어집니다. 메뉴 전체 너비를 610px에서 605px로 줄입니다.
+3. 메뉴6을 제외한 나머지 항복(메뉴1~5)의 링크 위로 마우스 포인터를 올리면 배경색은 #555로, 글자색은 #fff로 바꿉니다.
+4. 마지막 메뉴6의 링크 위로 마우스 포인터를 올리면 배경색은 #b30000로, 글자색은 #fff로 바꿉니다.
+
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>연습문제 2</title>  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .top-menu {
+      margin: 50px auto;
+      padding: 0;
+      list-style: none;
+      width: 610px;
+      height: 35px;
+      box-shadow: 0 3px 4px #8b8b8b;
+      background-color: #dadada;
+    }
+    .top-menu li {
+      float: left;
+      border-right: 1px solid #929292;
+    }
+    .top-menu li a:link{
+      color: black;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      width: 100px;
+      height: 35px;
+      line-height: 35px;
+    }
+    .top-menu li a:visited {
+      color: black;
+    }      
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="top-menu">
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+      <li><a href="#">메뉴4</a></li>
+      <li><a href="#">메뉴5</a></li>
+      <li><a href="#">메뉴6</a></li>
+    </ul>
+   </nav>
+</body>
+</html>

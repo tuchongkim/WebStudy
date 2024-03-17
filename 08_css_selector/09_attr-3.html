@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>속성 선택자</title>
+	<style>
+		ul { list-style:none; }
+		li {
+			display:inline-block;
+			margin:10px;
+			}
+			li a {
+				padding: 5px 20px;
+				font-size: 14px;
+				color: blue;
+				text-decoration: none;
+			}
+			.flat {
+				background:#eee;
+				border:1px solid #222;
+			}
+			a[class ~="button"] {           
+				box-shadow:rgba(0,0,0,0.5) 4px 4px; /* 그림자 지정 */
+				border-radius: 5px;  /* 테두리를 둥글게 */
+				border:1px solid #222;
+			}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#" class="flat">메뉴 1</a></li>
+		<li><a href="#" class="flat">메뉴 2</a></li>
+		<li><a href="#" class="button">메뉴 3</a></li>
+		<li><a href="#" class="flat button" >메뉴 4</a></li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+속성 선택자
+
+3. 여러 속성값 중에서 특정 속성값이 포함된 속성 요소를 선택하는 [속성 ~= 값] 선택자
+	a. 속성이 하나면서 속성값이 여러 개일 때 속성값을 찾는 데 편리
+	b. example
+			b-1. [class ~= button] { ... }
+	c. 주의할 점
+			c-1. [속성 ~= 값] 선택자는 속성값이 정확히 일치하는 요소만 선택한다는 점.
+			c-2. 예를 들어 flat-button 또는 button-6 와 같이 button 외엥 다른 글자가 속성값에 포함되어 있으면 선택 X
+
+ -->

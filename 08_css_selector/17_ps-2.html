@@ -1,0 +1,187 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>회원 가입</title>
+  <style>
+    .container {
+      width: 960px;
+      margin: 0 auto;
+    }
+    .navi{
+      width: 960px;
+      height: 60px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .navi ul{
+      list-style: none;
+      padding-top: 10px; 
+      padding-bottom: 5px;
+    }
+    .navi ul li {
+      display: inline-block;
+      width: 150px;
+      padding: 10px;   
+    }
+    .navi a:link, .navi a:visited {
+      font-size: 14px;
+      padding: 10px; 
+      text-decoration: none;  /* 밑줄 없음 */
+
+    }
+    .navi a:hover,  .navi a:focus {
+      background-color: #222;  /* 배경색 */
+      color: #fff;  /* 글자색 */
+    }
+
+    .navi a:active {
+      background-color: #f00;  /* 배경색 */
+    }
+
+    #signup {
+      background: #fff;
+      border: 1px solid #222;
+      border-radius: 5px;
+      padding: 20px;
+      width: 400px;	
+      margin: 30px auto;
+    }
+
+    #signup fieldset {
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+    }
+        
+    #signup legend {
+      font-size: 16px;
+      font-weight: bold;
+      padding-left: 5px;
+      padding-bottom: 10px;	
+    }
+  
+    #signup ul li {
+      line-height: 30px;
+      list-style: none;
+      padding: 5px 10px;
+      margin-bottom: 2px;
+    }
+          
+    #signup fieldset:first-of-type label {
+      float: left;
+      font-size: 13px;
+      width: 60px;
+    }
+
+    /* #signup input[type=text], input[type=tel] {
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 5px;
+      width: 200px;
+    } */
+  
+    #signup input:not([type=radio]) {  /* id='signup'인 요소에서 type이 radio가 아닌 모든 input 태그 요소에 스타일 적용  */
+      border: 1px solid #ccc;  /* 흰색 실선 테두리 */
+      border-radius: 3px;  /* 둥근 모서리 */
+      padding: 5px;  /* 내부 여백 */
+      width: 200px;  /* 너비 */
+    }
+    #signup input:not([type=radio]):hover {
+      border-color: #f00;
+    }
+    #signup input:checked + label {  /* input 요소에 checked 속성이 추가되었을 때 label 요소의 스타일 */
+      color: red;  /* 글자색을 빨간색으로 */
+      font-weight: bold;  /* 글자 굵게 */
+    }
+
+    #signup button {	
+      border: 1px solid #222;
+      border-radius: 20px;
+      display: block;
+      font: 16px 맑은고딕,굴림,돋움;
+      letter-spacing: 1px;
+      margin: auto;
+      padding: 7px 25px; 
+    }
+
+    #signup b {
+      float: left;
+      font-size: 13px;
+      width: 110px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navi">
+      <ul>
+        <li><a href="ps-1.html#intro">이용 안내</a></li>
+        <li><a href="ps-1.html#room">객실 소개</a></li>
+        <li><a href="ps-1.html#reservation">예약 방법 및 요금</a></li>
+        <li><a href="ps-2.html">예약하기</a></li>
+      </ul>
+    </nav>  
+
+    <form id="signup">    
+      <fieldset>
+        <legend>개인 정보</legend>
+        <ul>
+          <li>
+            <label for="fullname">이름</label>
+            <input id="fullname" name="fullname" type="text" required>
+          </li>
+          <li>
+            <label for="tel">연락처</label>
+            <input id="tel" name="tel" type="tel">
+          </li>          
+        </ul>
+      </fieldset>
+      <fieldset>  
+        <legend>객실 형태</legend>
+        <ul>
+          <li>
+            <input type="radio" name="room" id="basic">
+            <label for="basic">기본형(최대 2인)</label>
+          <li>      
+          <li>
+            <input type="radio" name="room" id="family">
+            <label for="family">가족형(최대 8인)</label>
+          </li>          
+        </ul>
+      </fieldset>
+      <button type="submit"> 제출 </button> 
+    </form>
+  </div>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+가상 클래스와 가상 요소
+
+2. 요소 상태에 따른 가상 클래스
+	a. 웹 사이트나 애플리케이션 화면에서 요소의 상태에 따라 스타일을 적용할 때 사용하는 가상 클래스 선택자
+	b. 다양한 가상 클래스 선택자들
+			b-1. ':target'
+          - 앵커(anchor) 대상에 스타일을 적용
+          - 같은 문서 안에서 다른 위치로 이동할때 앵커를 이용하는데,
+          - ':target' 을 통해 앵커로 연결된 부분(=앵커의 목적지)의 스타일을 쉽게 정의할 수 있음
+      b-2. ':enabled'와 ':disabled'
+          - 요소의 사용 여부에 따라 스타일 적용
+          - 해당 요소가 사용할 수 있는 상태일 경우 -> ':enabled'
+          - 해당 요소가 사용할 수 없는 상태일 경우 -> ':disabled'
+          - 읽기 전용인 텍스트 필드(textarea)의 스타일을 지정할 때 ':disabled'를 통해 쉽게 지정할 수 있음
+      b-3. ':checked'
+          - 선택한 항목의 스타일을 적용
+          - 폼의 라디오 박스나 체크 박스에서 선택된 항목에는 checked라는 속성이 추가됨
+          - 이런 checked 속성이 있는 요소의 스타일만 지정할때 ':checked' 선택자를 통해 쉽게 지정
+      b-4. ':not'
+          - 특정 요소를 제외하고 스타일을 적용
+          - 여기서 not은 '괄호 안에 있는 요소를 제외한' 이라는 뜻을 가진다
+          - 예를 들어 폼 양식에서 '라디오 필드가 아닌 필드들'을 모두 지정하고 싶을 때 사용하면 편리
+
+ -->
