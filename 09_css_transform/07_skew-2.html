@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Transform</title>
+	<style>
+		#container{
+			width: 600px;
+			margin: 20px auto;
+		}
+		h1 {
+			width: 500px;
+			height: 80px;
+			background-color: #222;
+			color: #fff;
+			font-weight: bold;			
+			line-height: 80px;
+			text-align: center;	 
+			transform: skewX(15deg);  /* x축 기준으로 15도 비틀기 */				
+		}
+	</style>
+</head>
+<body>		
+	<div id="container">		
+		<h1>CSS 변형 함수 익히기</h1>
+	</div>		
+</body>
+</html>
+
+
+
+
+
+<!-- 
+변형(transform) 알아보기
+
+5. 요소를 비틀어 왜곡하는 skew() 함수
+	a. 지정한 각도만큼 요소를 비틀어 왜곡함
+	b. 양쪽 방향으로 비틀거나 한 쪽 방향으로만 비틀수도 있음
+	c. skew(x각도, y각도) / skewX(x각도) / skewY(y각도) 중 하나 사용
+			c-1. 만약 skew(x각도, y각도)에서 y각도를 지정해주지 않으면 0으로 간주
+			c-2. skewX()는 각도값이 양수면 왼쪽이 올라가고 오른쪽이 내려감
+			c-3. skewY()는 각도값이 양수면 오른쪽이 올라가고 왼쪽이 내려감
+			c-4. 여기서 왼쪽 오른쪽은 축을 바라보는 방향 기준, 올라간다는 것은 축의 값이 커진다는 것.
+
+ -->

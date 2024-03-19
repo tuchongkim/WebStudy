@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Transition</title>
+	<style>
+    .box {
+      margin: 20px auto;
+      width: 100px;
+      height: 100px;
+      background-color: #07f;
+      border: 1px solid #222;
+      transition-property: width, height;  /* 트랜지션 대상 - 너비, 높이 */
+      transition-duration: 2s, 1s;  /* 트랜지션 시간 - 2초, 1초 */
+    }
+    .box:hover {
+      width: 200px;
+      height: 120px;		
+    }
+	</style>
+</head>
+<body>
+	<div class="box"></div>	
+</body>
+</html>
+
+
+
+
+
+<!-- 
+트랜지션(transition) 알아보기
+
+1. 트랜지션이란
+  a. 트랜지션은 웹 요소의 배경색을 바꾸거나 도형의 테두리를 사각형에서 원형으로 바꾸는 등 스타일 속성이 바뀌는 것
+  b. 트랜지션에서는 스타일이 바뀌는 시간을 조절하여 자바스크립트를 사용하지 않고도 애니메이션 효과를 낼수도 있음
+
+2. 트랜지션과 속성
+  a. transition-property
+      a-1. 트랜지션의 대상을 지정하는 속성
+      a-2. 트랜지션을 만들기 위해 가장 먼저 정의하는 속성
+      a-3. 기본형
+           transition-property: all | none | <속성 이름>
+      a-4. 속성값들
+            (1) all: 요소의 모든 속성이 트랜지션 대상이 된다. 기본값.
+            (2) none: 트랜지션을 하는 동안 아무 속성도 바뀌지 않는다.
+            (3) 속성이름: 트랜지션 효과를 적용할 속성을 지정. 속성이 여러개일 경우 쉼표로 구분. ex) width, height
+  b. transition-duration
+      b-1. 트랜지션의 진행 시간을 지정하는 속성
+      b-2. 지정할 수 있는 시간 단위는 초(second) 또는 밀리초(millisecond)
+      b-3. 트랜지션 대상 속성이 여러개라면 쉼표로 구분해서 여러개를 지정할 수 있음
+      b-4. 기본형
+           transition-duration: <시간>
+      b-5. example
+           transition-duration: 1s, 2s;
+
+ -->

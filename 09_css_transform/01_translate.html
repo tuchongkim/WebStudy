@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Transform:translate</title>
+	<style>
+		#container {
+			width: 800px;
+			height: 200px;
+			margin: 20px auto;
+		}
+		.origin {
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			float: left;
+			margin: 40px;
+		}
+		.origin > div {  /* origin의 자식요소(div) 스타일 지정 */
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+		}
+		#movex:hover {
+			transform: translateX(50px);  /* x축으로(가로) 50px 이동 */
+		}
+		#movey:hover {
+			transform: translateY(20px);  /* y축으로(세로) 20px 이동 */
+		}
+		#movexy:hover {
+			transform: translate(10px, 20px);  /* x축으로(가로) 10px, y축으로(세로) 20px 이동 */
+		}
+	</style>
+</head>
+<body>		
+	<div id="container">
+		<div class="origin">
+			<div  id="movex"></div>		
+		</div>
+		<div class="origin">
+			<div id="movey"></div>	
+		</div>
+		<div class="origin">
+			<div id="movexy"></div>		
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+변형(transform) 알아보기
+
+1. transform과 변형 함수
+	a. CSS에서 변형을 적용하려면 transform 속성과 변형 함수 이름을 함께 작성
+	b. 기본형
+		 transform: 함수
+	c. 웹 요소를 이동시키는 함수는 translate()
+			c-1. 예를 들어 웹 요소를 x축으로 50px, y축으로 100px 이동하는 클래스 선택자의 경우
+						- .photo { transform: translate(50px, 100px); }
+	d. 2차원 변형과 3차원 변형
+			d-1. 2차원 변형
+						- 평면에서 변형 (수평 또는 수직 방향 이동)
+						- 평면에서는 2차원 좌표 사용, x축은 오른쪽으로 갈수록 값 증가, y축은 아래로 갈수록 값 증가
+			d-2. 3차원 변형
+						- x축, y축에 원근감을 더해주는 z축을 추가하여 변형
+						- z축은 앞뒤로 이동, 클라이언트 쪽으로 다가올수록 값 증가
+			d-3. 2차원 변형 함수들
+						(1) translate(tx, ty): 지정한 크기만큼 x축, y축으로 이동
+						(2) translateX(tx): 지정한 크기만큼 x축으로 이동
+						(3) translateY(ty): 지정한 크기만큼 y축으로 이동
+						(4) scale(sx, sy): 지정한 크기만큼 x축과 y축으로 확대-축소
+						(5) scaleX(sx): 지정한 크기만큼 x축으로 확대-축소
+						(6) scaleY(sy): 지정한 크기만큼 y축으로 확대-축소
+						(7) rotate(각도): 지정한 각도 만큼 회전
+						(8) skew(ax, ay): 지정한 각도만큼 x축과 y축으로 왜곡
+						(9) skewX(ax): 지정한 각도만큼 x축으로 왜곡
+						(10) skewY(ay): 지정한 각도만큼 y축으로 왜곡
+			d-4. 3차원 변형 함수들
+						(1) translate3d(tx, ty, tz): 지정한 크기만큼 x축, y축, z축으로 이동
+						(2) translateZ(tz): 지정한 크기만큼 z축으로 이동
+						(3) scale3d(sx, sy, sz): 지정한 크기만큼 x축, y축, z축으로 확대-축소
+						(4) scaleZ(sz): 지정한 크기만큼 z축으로 확대-축소
+						(5) rotate(rx, ry, 각도): 지정한 각도 만큼 회전
+						(6) rotate3d(rx, ry, rz, 각도): 지정한 각도 만큼 회전
+						(7) rotateX(각도): 지정한 각도만큼 x축으로 회전
+						(8) rotateY(각도): 지정한 각도만큼 y축으로 회전
+						(9) rotateZ(각도): 지정한 각도만큼 z축으로 회전
+						(10) perspective(길이): 입체적으로 보일 수 있도록 깊잇값을 지정
+
+
+2. 웹 요소를 이동시키는 transalte() 함수
+	a. 자세한 내용은 위의 함수 내용 참고
+	b. transfrom: translate(tx, ty) 에서 ty값을 지정해주지 않으면 0으로 간주
+
+ -->

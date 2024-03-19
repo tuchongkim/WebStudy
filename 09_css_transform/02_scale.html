@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Transform:scale</title>
+	<style>
+		#container{
+			width: 600px;
+			margin: 20px auto;
+		}
+		.origin {
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			float: left;
+			margin: 40px;
+		}
+		.origin > div {  /* origin의 자식요소(div) 스타일 지정 */
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+		}
+		#scalex:hover{
+			transform: scaleX(2);  /* x축으로(가로) 2배 확대 */ 
+		}
+		#scaley:hover{
+			transform: scaleY(1.5);  /* y축으로(세로) 1.5배 확대 */ 
+		} 
+		#scale:hover{
+			transform: scale(0.7);  /* x, y축으로(가로, 세로) 0.7배 확대 */ 
+		}
+	</style>
+</head>
+<body>
+	<div id="container">		
+		<div class="origin">
+			<div id="scalex"></div>
+		</div>
+		<div class="origin">
+			<div id="scaley"></div>
+		</div>
+		<div class="origin">
+			<div id="scale"></div>
+		</div>
+	</div>		
+</body>
+</html>
+
+
+
+
+
+<!-- 
+변형(transform) 알아보기
+
+3. 요소를 확대-축소하는 scale() 함수
+	a. 웹 요소를 지정한 크기만큼 확대하거나 축소
+	b. 괄호안의 값(sx, sy, sz)이 1보다 크면 확대되고 1보다 작으면 축소
+	c. 함수와 관련된 자세한 내용은 01_translate.html 의 함수 내용 참고
+	d. transform: scale(sx, sy)에서 sy값을 지정하지 않으면 sx와 같은 값으로 간주
+			d-1. 예를 들어 scale(2) is same as scale(2, 2)
+
+ -->

@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Animation</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 60px auto;      
+      animation: rotate 1.5s infinite, background 1.5s infinite alternate;  /* 2개의 애니메이션을 한번에 지정 */
+    }
+
+    @keyframes rotate {  /* 0도 -> x축 -180도 회전 -> y축 -180도 회전 */
+      from { transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+      50% { transform: perspective(120px) rotateX(-180deg) rotateY(0deg); }
+      to { transform: perspective(120px) rotateX(-180deg) rotateY(-180deg); }
+    }
+
+    @keyframes background {  /* 배경색 빨강 -> 초록 -> 파랑 */
+      from { background-color: red; }
+      50% { background-color: green }
+      to { background-color: blue; }
+    }
+  </style>
+</head>
+<body>
+	<div class="box">	</div>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+애니메이션(animation) 알아보기
+
+1. CSS 애니메이션에서 사용하는 속성
+  a. animation 속성을 통해 자바스크립트를 사용하지 않고도 웹 요소에 애니메이션 효과 추가 가능
+	b. 특정 지점에서 스타일을 바꾸면서 애니메이션을 만드는데, 이 바뀌는 지점이 키 프레임(keyframe)
+			b-1. 키 프레임은 @keyframes 속성으로 정의
+	c. animation 속성과 그 하위 속성을 이용해서 애니메이션 실행 시간이나 반복 여부 등을 결정
+	d. 다양한 animation 속성
+			d-1. @keyframes: 애니메이션이 바뀌는 지점을 지정
+						(1) 기본형
+							@keyframes <이름> {
+								<선택자> { <스타일> }
+							}
+						(2) 여기서 <선택자> 는 스타일 속성값이 바뀌는 지점을 가리킨다
+						(3) 예를 들어 애니메이션의 중간 지점을 추가하려면 시작위치를 0%, 끝위치를 100%로 하고 50% 위치 추가
+						(4) 만약 시작과 끝 위치만 사용한다면 0%, 100% 대신 from {} to {} 와 같이 사용해도 됨
+			d-2. animation-name: @keyframes로 설정해 놓은 중간 상태를 지정
+			      (1) 웹 문서에서는 애니메이션을 여러 개 정의할 수 있으므로 이름을 이용해 애니메이션을 구별
+						(2) 기본형
+							animation-name: <키프레임 이름> | none
+			d-3. animation-duration: 애니메이션 실행 시간을 지정
+			      (1) 기본형
+							animation-duration: <시간>
+						(2) 시간 단위는 초(s) 또는 밀리초(ms) 사용 가능
+						(3) 기본값은 0. 따라서 만약 animation-duration을 정의하지 않으면 애니메이션은 실행되지 않음.
+      d-4. animation-direction: 애니메이션 방향을 지정
+            (1) 기본형
+              animation-direction: normal | reverse | alternate | alternate-reverse
+            (2) 속성값들
+                - normal: 애니메이션을 from에서 to로 진행. 기본값.
+                - reverse: 애니메이션을 to에서 from으로 진행.
+                - alternate: 홀수 번째는 normal로, 짝수 번쨰는 reverse로 진행.
+                - alternate-reverse: 홀수 번째는 reverse로, 짝수 번쨰는 normal로 진행.
+      d-5. animation-iteration-count: 반복 횟수를 지정
+            (1) 기본형
+              animation-iteration-count: <숫자> | infinite
+            (2) 속성값들
+                - <숫자>: 애니메이션의 반복 횟수를 정함.
+                - infinite: 애니메이션을 무한 반복.
+      d-6. animation-timing-function: 애니메이션 속도 곡선을 지정
+            (1) 기본형
+              animation-timing-function: linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(n, n, n, n)
+            (2) 각 속성값은 tr-function.html의 transition-timing-function과 동일
+      d-7. animation: 애니메이션 속성을 한꺼번에 표기
+            (1) 주의할 점! animation-durtaion 속성값을 반드시 표기해야 함
+            (2) 2개 이상의 애니메이션을 실행하는 경우 쉼표(,)로 구분해서 작성
+
+ -->

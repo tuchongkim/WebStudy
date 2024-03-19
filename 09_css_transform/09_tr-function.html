@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Transition timing function</title>
+  <style>
+    #ex div{
+      float: left;
+      width: 100px;
+      height: 50px;
+      margin: 5px 10px;
+      padding: 5px;
+      color: white;
+      background-color: #006aff;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;	
+    }
+    #ex:hover div{
+      height: 400px;
+    }
+    #ex .ease {
+      transition: 3s ease;
+    }
+    #ex .linear{
+      transition: 3s linear;
+    }
+    #ex .ease-in{
+      transition: 3s ease-in;
+    }
+    #ex .ease-out{
+      transition: 3s ease-out;
+    }
+    #ex .ease-in-out{
+      transition: 3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div id="ex">
+    <div class="ease"> ease </div>
+    <div class="linear"> linear </div>
+    <div class="ease-in"> ease-in </div>
+    <div class="ease-out"> ease-out </div>
+    <div class="ease-in-out"> ease-in-out </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+트랜지션(transition) 알아보기
+
+2. 트랜지션과 속성
+  a. transition-property
+      a-1. 트랜지션의 대상을 지정하는 속성
+      a-2. 트랜지션을 만들기 위해 가장 먼저 정의하는 속성
+      a-3. 기본형
+           transition-property: all | none | <속성 이름>
+      a-4. 속성값들
+            (1) all: 요소의 모든 속성이 트랜지션 대상이 된다. 기본값.
+            (2) none: 트랜지션을 하는 동안 아무 속성도 바뀌지 않는다.
+            (3) 속성이름: 트랜지션 효과를 적용할 속성을 지정. 속성이 여러개일 경우 쉼표로 구분. ex) width, height
+  b. transition-duration
+      b-1. 트랜지션의 진행 시간을 지정하는 속성
+      b-2. 지정할 수 있는 시간 단위는 초(second) 또는 밀리초(millisecond)
+      b-3. 트랜지션 대상 속성이 여러개라면 쉼표로 구분해서 여러개를 지정할 수 있음
+      b-4. 기본형
+           transition-duration: <시간>
+      b-5. example
+           transition-duration: 1s, 2s;
+	c. transition-timing-function
+			c-1. 트랜지션의 속도 곡선을 지정하는 속성
+			c-2. 트랜지션 효과의 시작, 중간, 끝에서 속도를 지정해 전체 속도 곡선을 만들 수 있음
+			c-3. 속도 곡선은 미리 정해진 키워드나 베지에 곡선을 이요해 표현
+			c-4. 기본형
+					 transition-timing-function: linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(n, n, n, n)
+			c-5. 속성값들
+						(1) ease: 처음에는 천천히 시작하고 점점 빨라지다가 마지막엔 천천히 끝냄. 기본값.
+						(2) linear: 시작부터 끝까지 같은 속도로 진행
+						(3) ease-in: 느리게 시작
+						(4) ease-out: 느리게 끝냄
+						(5) ease-in-out: 느리게 시작하고 느리게 끝냄
+						(6) cubic-bezier(n, n, n, n): 베지에 함수를 정의해서 사용. 이때 n = 0 ~ 1 사이만 사용 가능.
+
+ -->
