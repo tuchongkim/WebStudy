@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>viewport units</title>
+  <style>
+    h1 {
+      font-size: 5vw;  /* device-width의 크기에 따라 글자 크기 변화 */
+      text-align: center;
+    }
+  </style>  
+</head>
+<body>
+  <h1>안녕하세요?</h1>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+반응형 웹 알아보기
+
+1. 반응형 웹 디자인(responsive web design)이란
+	a. 화면 크기가 다양한 모바일 기기들이 쏟아져 나오는데 그때마다 사이트를 따로 제작하는 것은 비효율적
+	b. 따라서 웹 요소를 화면 크기에 맞게 재배치하고 각 요소의 표시 방법만 바꾸는 것이 바로 반응형 웹 디자인
+
+2. 모바일 기기를 위한 뷰포트(viewport)
+  a. pc에 맞게 제작된 웹 사이트를 모바일에서 보면 작게 표시됨
+  b. 뷰포트를 지정하면 접속한 기기의 화면에 맞게 확대-축소해서 보여준다.
+      b-1. 이때 뷰포트는 스마트폰 화면에서 실제 내용이 표시되는 영역
+  c. 모바일 기기에 적합한 사이트를 제작했더라도 원하는 결과와 다를 수 있음
+      c-1. 웹키트(webkit)를 기반으로 한 모바일 브라우저의 기본 뷰포트 너비가 980px
+      c-2. 따라서 웹 페이지 너비를 스마트폰용인 320px로 맞추어 제작하더라도 980px에 맞게 표시하려고 함
+      c-3. 이런 문제점을 해소하기 위해 뷰포트를 사용해야 한다.
+
+3. 뷰포트 지정하기
+  a. <meta> 태그릴 이용해 <head></head> 사이에 작성
+  b. 기본형
+     <meta name="viewport" content="속성1=값1", "속성2=값2", ...>
+  c. content에 사용하는 속성들
+      c-1. width: 뷰포트 너비, 사용 가능한 값은 device-width 또는 크기
+      c-2. height: 뷰포트 높이, 사용 가능한 값은 device-height 또는 크기
+      c-3. user-scalable: 확대-축소 가능 여부, 사용 가능한 값은 yes 또는 no
+      c-4. initial-scale: 초기 확대-축소 값, 사용 가능한 값은 1~10
+
+4. 뷰포트 단위
+  a. 뷰포트가 등장하기 전에는 크기를 지정할 때 주로 px, %의 단위를 사용
+  b. 이제는 뷰포트를 기준으로 하는 단위를 사용할 수도 있음
+      b-1. vw(viewport width): 1vw는 뷰포트 너비의 1%와 같다
+      b-2. vh(viewport height): 1vh는 뷰포트 높이의 1%와 같다
+      b-3. vmin(viewport minimum): 뷰포트의 너비와 높이 중에서 작은 값의 1%와 같다
+      b-4. vmax(viewport maximum): 뷰포트의 너비와 높이 중에서 큰 값의 1%와 같다
+
+ -->

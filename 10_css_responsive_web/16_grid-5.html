@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Grid Layout</title>
+  <style>
+    #wrapper{
+      width: 700px;
+      display: grid;  /* 그리드 컨테이너 지정 */
+      grid-template-columns: repeat(3, 1fr);  /* 칼럼은 1fr씩 3개 */
+      grid-template-rows: repeat(3, 100px);  /* 줄은 100px씩 3개 */
+    }
+    .box{
+      padding: 15px;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+    }   
+    .box1 {
+      background-color: #3689ff;
+      grid-column: 1/4;  /* 칼럼 라인 1번부터 4번까지 */
+    }
+    .box2 {
+      background-color: #00cf12;
+      grid-row: 2/4;  /* 줄 라인 2번부터 4번까지 */
+      /* grid-column: 1/2; */
+      grid-column-start: 1;  /* 칼럼 라인 1번부터 2번까지 (한 칸일 경우 끝 번호 생략 가능) */
+    }
+    .box3 {
+      background-color: #ff9019;
+      grid-column: 2/4;  /* 칼럼 라인 2번부터 4번까지 */
+      /* grid-row: 2/3; */
+      grid-row-start: 2;  /* 줄 라인 2번부터 3번까지 (한 칸일 경우 끝 번호 생략 가능) */
+      }
+    .box4 {
+      background-color: #ffd000;
+      grid-column-start: 3;  /* 칼럼 라인 3번부터 4번까지 (한 칸일 경우 끝 번호 생략 가능) */
+      grid-row-start: 3;  /* 줄 라인 3번부터 4번까지 (한 칸일 경우 끝 번호 생략 가능) */
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+CSS 그리드 레이아웃 사용하기
+
+1. CSS 그리드 레이아웃에서 사용하는 용어
+  a. CSS 그리드 레이아웃: 소스 코드를 최대한 간단하게 유지하면서 대부분의 기기에 대응할 수 있는 레이아웃 기법
+  b. 플렉스 박스 레이아웃과 달리 주축을 지정하지 않고, 요소를 배치할 때 가로와 세로를 모두 사용
+  c. 2차원 레이아웃이라고 보면 됨
+      c-1. 줄(row): 가로 방향
+      c-2. 칼럼(column): 세로 방향
+  d. 줄 간격과 칼럼 간격을 지정해서 원하는 형태의 레이아웃을 만든다.
+
+2. CSS 그리드 레이아웃 항목을 배치하는 속성
+  a. display
+      a-1. 그리드 컨테이너를 지정하는 속성
+      a-2. 속성값
+          - grid: 컨테이너 안의 항목을 블록 레벨 요소로 배치.
+          - inline-grid: 컨테이너 안의 항목을 인라인 레벨 요소로 배치.
+  b. grid-template-columns & grid-template-rows
+      b-1. 그리드 컨테이너 안에 항목을 배치할 때 칼럼과 줄의 크기와 개수를 지정하는 속성.
+  (...생략...)
+
+  h. 그리드 라인
+      h-1. 그리드 레이아웃은 눈에 보이지 않는 그리드 라인이 포함되어 있음.
+      h-2. 예를 들어 칼럼이 3개인 그리드는 4개의 칼럼 라인이 존재.
+          (라인1) (칼럼1) (라인2) (칼럼2) (라인3) (칼럼3) (라인4)
+      h-3. 이 그리드 라인을 이용해 그리드 항목을 배치할 수도 있다.
+          (1) grid-column-start: 칼럼 시작의 라인 번호 지정.
+          (2) grid-column-end: 칼럼 마지막의 라인 번호 지정.
+          (3) grid-column: 칼럼 시작 번호와 끝 번호 사이에 슬래시(/)를 넣어 사용.
+          (4) grid-row-start: 줄 시작의 라인 번호 지정.
+          (5) grid-row-end: 줄 마지막의 라인 번호 지정.
+          (6) grid-row: 줄 시작 번호와 끝 번호 사이에 슬래시(/)를 넣어 사용.
+
+ -->
