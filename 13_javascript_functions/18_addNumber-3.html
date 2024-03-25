@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+  <style>
+		body {
+			padding-top: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		/* 자바스크립트에서는 이름이 없는 함수인 익명 함수를 선언해서 사용할 수 있다.
+		
+		function(a, b) {  // 익명함수 선언
+			return a + b;
+		}
+		
+		익명 함수는 함수 자체가 식(expression)이므로 함수를 변수에 할당 가능, 다른 함수의 매개변수로 사용할 수도 있음.
+		*/
+
+    var sum = function(a, b) {  // 익명 함수를 선언한 후 변수 sum에 할당
+      return a + b;
+    }
+    document.write("함수 실행 결과 : " + sum(10, 20) );
+  </script>	
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>var 예약어를 사용한 지역 변수와 전역 변수</title>
+</head>
+<body>
+	<script>
+    /* var 예약어를 사용하지 않고 변수를 선언하면 전역변수가 된다 */
+
+		function addNumber() { 								
+			var sum = 10 + 20;  // 지역 변수
+      multi = 10 * 20;  // 전역 변수
+		}
+    addNumber();
+    console.log(multi);  // 200
+  </script>
+</body>
+</html>

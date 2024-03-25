@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>구구단 - for문</title>
+
+	<!-- css를 수정해서 테이블 형태로 구구단 스타일 지정 -->
+	<link rel="stylesheet" href="css/gugudan-table.css">
+<body>
+	<h1>구구단</h1>
+	<script>
+		var i, j;
+
+		for (i = 1; i <= 9; i++) {
+			document.write("<table>");  // 테이블 생성
+			document.write("<tr><th>" + i + "단</th></tr>");  // 테이블 제목 행
+			for (j = 1; j <= 9; j++) {
+				document.write("<tr><td>" + i + " X " + j + " = " + i*j + "</td></tr>");  // 테이블 일반 행 (구구단 출력)
+			}
+			document.write("</table>");
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function - Variable</title>
+</head>
+<body>
+  <script>
+    /* let 예약어를 사용한 변수는 호이스팅이 없다.
+    선언하기 전에 사용할 경우 오류 메시지 출력 */
+
+    var x = 10;
+
+		function displayNumber() { 								
+      console.log("x is " + x);
+      console.log("y is " + y);  // 선언되지 않은 y를 사용 -> Uncaught ReferenceError ReferenceError: Cannot access 'y' before initialization
+      let y = 20;  // y 변수 선언
+		}
+    displayNumber();
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Fuctions</title>
+</head>
+<body>
+  <script>
+    /*
+    // 매개변수가 1개인 익명 함수
+    let hi = function(user) {
+      document.write(user + "님, 안녕하세요?");
+    }
+    
+    // 매개변수가 1개인 화살표 함수
+    let hi = (user) => { document.write(user + "님, 안녕하세요?"); }
+    */
+    
+    let hi = user => { document.write(user + "님, 안녕하세요?"); }  // 매개변수가 1개인 경우 매개변수의 괄호는 생략 가능
+    
+    hi("경희");
+  </script>
+</body>
+</html>

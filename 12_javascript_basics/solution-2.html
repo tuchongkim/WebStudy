@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>연습문제 2</title>
+	<style>
+		body {
+			font-size: 1.2em;
+			text-align: center;
+		}
+		.emp {
+			color: red;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h2>3의 배수 찾기</h2>
+
+	<script>
+		var inputNumber = parseInt(prompt("몇 까지 3의 배수를 찾을까요?"));
+
+		if (inputNumber !== null) {
+			var i, threeCounter;
+			threeCounter = 0;
+
+			if (isNaN(inputNumber)) {  // 입력값이 숫자가 아닌 경우
+				document.write("invalid input");
+			}
+			else if (inputNumber < 1) {  // 입력값이 1보다 작은 숫자인 경우
+				document.write("invalid number");
+			}
+			else {
+				for (i = 1; i <= inputNumber; i++) {
+					if (i % 3 === 0) {
+						document.write(i + ", ");
+						threeCounter += 1;
+					}
+				}
+				document.write("<br><div class='emp'>" + inputNumber + "까지 3의 배수의 개수 : " + threeCounter + "</div>");
+			}
+		}
+	</script>
+</body>
+</html>

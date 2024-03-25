@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수 호이스팅</title>
+</head>
+<body>
+  <script>
+    /* 호이스팅(hoisting): 자바스크립트 해석기가 변수의 선언과 값 할당을 분리해서 
+    선언 부분을 스코프의 가장 위쪽으로 끌어오리는 것 */
+
+    var x = 10;
+
+    /* 실제 코드 */
+		function displayNumber() {
+      console.log("x is " + x);  // x is 10
+      console.log("y is " + y);  // y is undefined
+      var y = 20;
+		}
+
+    /* 자바스크립트 해석기가 인식하는 코드 
+    function displayNumber() {
+      var y;
+      console.log("x is " + x);
+      console.log("y is " + y);      
+      y = 20;
+		}
+    */
+
+    displayNumber();
+  </script>
+</body>
+</html>

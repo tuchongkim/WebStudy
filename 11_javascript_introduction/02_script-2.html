@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>글자색 바꾸기</title>
+	<style>
+		body { text-align: center; }
+		#heading { color: blue; }
+		#text { 
+			color: gray;
+			font-size: 15px;
+		}
+	</style>	
+</head>
+<body>
+	<h1 id="heading">자바스크립트</h1>
+	<p id="text">위 텍스트를 클릭해 보세요</p>
+
+	<script src="js/change-color.js"></script>  <!-- 외부 스크립트 파일 연결 -->
+</body>
+</html>
+
+
+
+
+
+<!-- 
+웹 브라우저와 자바스크립트
+
+1. 웹 문서 안에 <script> 태그로 자바스크립트 작성하기
+	a. 자바스크립트 소스가 짧은 경우 실행할 위치에 바로 코드를 작성
+	b. <script></script> 태그 사이에 실행할 자바스크립트 소스를 작성
+	c. 웹 문서 어디에든 위치할 수 있으며, 여러 개 사용 가능
+	d. 대부분의 경우 </body> 태그 직전에 작성
+			d-1. 이미지와 텍스트 등의 요소들이 다 표시된 후 이를 제어하는 경우가 많기 때문
+	e. 단점이 많이 존재
+			e-1. html 태그와 함께 쓰이기 때문에 복잡도 증가
+			e-2. 유지 보수 측면에서 비효율적
+
+2. 외부 스크립트 파일로 연결해서 자바스크립트 작성하기
+	a. 따라서 자바스크립트를 웹문서에 직접 작성하기보다는 외부 파일에 작성하고 <script> 태그릴 이용해 연결
+	b. 기본형
+		 <script src="외부 스크립트 파일 경로"></script>
+
+ -->

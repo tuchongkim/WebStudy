@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+  <style>
+		body {
+			padding-top: 20px;
+			text-align: center;
+    }
+    .accent {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #00f;
+    }
+	</style>
+</head>
+<body>
+	<script>
+    /* 즉시 실행 함수: 한 번만 실행하는 함수, 함수를 정의하면서 동시에 실행.
+    즉시 실행 함수는 실행하는 순간에 자바스크립트 해석기에서 함수를 해석한다.
+    
+    기본형:
+      (function() {
+        명령
+      }(인수));
+    */
+  
+    (function() {
+      var userName = prompt("이름을 입력하세요.");
+      document.write("안녕하세요? <span class='accent'>" + userName + "</span>님!");
+    }());
+  </script>	
+</body>
+</html>

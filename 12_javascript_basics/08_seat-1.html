@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자리 배치도</title>
+</head>
+<body>
+  <h1>자리 배치도</h1>
+  <script>
+    /* 자리 배치도 프로그램 만들기
+    
+    seat-1.html: 입장객 수와 한줄에 몇 명씩 앉을 것인지 입력받고 총 몇 줄이 필요한지 계산
+    나머지 코드는 seat-result.html에서 구현
+
+    cf. parseInt() 함수: 괄호 안에 실수값이 들어왔을 떄 정수로 바꿔주는 함수
+    cf. prompt() 함수로 입력받은 값은 기본적으로 문자열로 저장됨
+    */
+
+    var memNum = prompt("입장객은 몇 명인가요?");  // 전체 입장객 
+    var colNum = prompt("한 줄에 몇 명씩 앉습니까?");  // 한 줄에 앉을 사람
+
+    if (memNum % colNum === 0)  // 전체 입장객 수가 열의 개수로 나누어 떨어진다면
+      rowNum = parseInt(memNum / colNum);
+    else  // 전체 입장객 수가 열의 개수로 나누어 떨어지지 않는다면
+      rowNum = parseInt(memNum / colNum) + 1;
+
+    document.write("모두 " + rowNum + "개의 줄이 필요합니다.");
+  </script>
+</body>
+</html>

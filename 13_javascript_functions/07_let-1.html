@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function - Variable</title>
+</head>
+<body>
+  <script>
+    /* 블록({}) 레벨 스코프를 가지는 let 예약어 */
+
+    function calcSum(n) {
+      let sum = 0;  // calcSum(){} 함수의 블록변수 sum
+      for(let i = 1; i < n + 1; i++) {  // for(){} 문의 블록변수 i
+        sum += i;	
+      }      
+      console.log(sum);
+    }    
+    calcSum(10);    
+  </script>
+</body>
+</html>

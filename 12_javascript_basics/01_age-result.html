@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나이 계산하기</title>
+</head>
+<body>
+    <script>
+			var currentYear = 2024;  // 기준 연도
+			var birthYear;  // 태어난 연도
+			var age;  // 나이
+
+			birthYear = prompt("태어난 연도를 입력하세요. (YYYY)", "");  // 프롬프트 창으로 값 입력받기
+      age = currentYear - birthYear + 1;
+      document.write(currentYear + "년 현재<br>");
+      document.write(birthYear + "년에 태어난 사람의 나이는 " + age + "세입니다."); // 예전 한국 나이
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!--
+변수 알아보기
+
+1. 변수란
+  a. 변수 = 프로그램을 실행하는 동안 값이 여러 번 달라질 수 있는 데이터
+  b. 상수 = 값을 한번 지정하면 값이 바뀌지 않는 데이터
+
+2. 변수 선언 규칙
+  a. 변수 선언 = 변수를 구별할 수 있게 이름을 붙여 주는 것
+  b. 변수 이름은 영어 문자와 언더스코어(_), 숫자를 사용
+      b-1. 첫 글자는 영어 대소문자나 언더스컹(_)만 사용 가능
+      b-2. 기호, 띄어쓰기는 허용 x
+  c. 영어 대소 문자를 구별하며 예악어는 변수 이름으로 사용 불가
+      c-1. var, if, else 등은 사용 불가능
+  d. 여러 단어를 연결한 변수 이름은 중간에 대문자를 섞어 사용
+      d-1. 낙타 표기법(cannel case)
+      d-2. example: totalCase
+  e. 변수 이름은 의미 있게 작성
+      e-1. 누구나 알아보기 쉽게
+
+3. 변수 선언하기
+  a. 기본형
+      var 변수명
+  b. 변수를 한꺼번에 여러개 선언 가능
+      b-1. example
+            var currentYear, birthYear, age;
+  c. 변수를 선언했다면 '=' 기호를 이요해서 값을 할당
+      c-1. 변수 선언 후 따로 할수도 있고, 동시에 할수도 있다.
+      c-2. example
+            var birthYear;
+            birthYear = 1995;
+            var currentYear = 2021;
+
+-->

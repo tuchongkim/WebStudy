@@ -1,0 +1,11 @@
+table {
+  margin: 20px;
+  float: left;  /* 문서 왼쪽에 떠 있게 */
+}
+table, th {
+  border: 1px solid #ccc;
+  border-collapse: collapse;  /* 테두리 합치기 */
+}
+th,td { padding: 10px 15px;}
+th { background: #eee;}  /* 흰색 계열 배경 */
+td { border: 1px dotted #222;}  /* 1px 검은색 점선 테두리 */

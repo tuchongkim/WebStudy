@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Fuctions</title>
+</head>
+<body>
+  <script>
+    /*
+    화살표 함수는 ES6 버전부터 => 표기법(화살표 표기법)을 사용해 함수 선언을 더 간단하게 만든 함수다.
+    화살표 함수는 익명 함수에만 사용 가능
+
+    기본형:
+    (매개변수) => { 함수 내용 }
+
+    // 매개 변수가 없는 익명 함수
+    const hi = function() {
+      return "안녕하세요?";
+    }
+    
+    // 매개변수가 없는 화살표 함수
+    const hi = () => {return "안녕하세요?"};
+    */
+
+    const hi = () => "안녕하세요?";  // 중괄호 안 함수 내용이 한 줄이라면 중괄호와 return 생략 가능.
+    
+    alert(hi());
+  </script>
+</body>
+</html>

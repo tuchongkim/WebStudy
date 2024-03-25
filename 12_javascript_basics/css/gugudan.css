@@ -1,0 +1,11 @@
+div {
+  display: inline-block;  /* 인라인 레벨 요소와 블록 레벨 요소의 속성 모두 포함 */
+  padding: 0 20px 30px 20px;  /* 위, 오른쪽, 아래, 왼쪽 패딩 지정 */
+  margin: 15px;  /* 4방향 마진 지정 */
+  border: 1px solid #ccc;  /* 1px 회색 실선 */
+  line-height: 2;  /* 줄간격 설정 (문단 글자 크기 기준 2배) */
+}
+div h3 {
+  text-align: center;  /* 가운데 정렬 */
+  font-weight: bold;  /* 굵은 글씨 */
+}
