@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+</head>
+<body>
+  <div id="container">    
+    <h1>DOM을 공부합시다</h1>
+    <a href="#">더 보기</a>    
+    <div id="info"></div>
+  </div>
+</body>
+</html>
+
+
+
+
+<!-- 
+웹 문서의 DOM 트리에 새 노드를 추가하기 위해서는
+  - 해당하는 요소 노드 뿐만 아니라
+  - 텍스트 노드, 속성 노드 등도 만들어야 한다.
+
+1. 텍스트 노드를 사용하는 새로운 요소를 추가하는 경우
+  a. 요소 노드를 만드는 createElement()
+      a-1. 기본형: document.createElement(노드명)
+      a-2. exaample: var newP = document.createElement("p");
+  b. 텍스트 노드를 만드는 createTextNode()
+      b-1. 기본형: document.createTextNode(텍스트);
+      b-2. example: var txtNode = document.createTextNode("추가할 텍스트 내용");
+  c. 자식 노드를 연결하는 appendChild()
+      c-1. 기본형: 부모노드.appendChild(자식노드)
+      c-2. example: newP.appendChild(txtNode);
+  d. 요소 노드를 상위 노드에 연결
+      d-1. 새로 만든 newP 노드를 <div id="info"></div> 요소의 자식 노드로 추가하려면
+      d-2. document.getElementById("info").appendChild(newP);
+
+ -->

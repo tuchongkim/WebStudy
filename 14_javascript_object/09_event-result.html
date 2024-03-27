@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>당첨자 발표</title>
+    <style>
+      h1 {
+        border: 1px solid black;
+        padding: 10px;
+        background: #eee;
+      }
+    </style>
+  </head>
+  <body>    
+    <h1>당첨자 발표</h1>
+    <script>
+      /* Math 객체는 인스턴스를 생성하지 않고 바로 사용
+      자주 쓰는 매서드들
+      1. abs() : 절댓값 반환
+      2. ceil() : 매개변수의 소수점 이하 부분을 올림
+      3. floor() : 매개변수의 소수점 이하 부분을 버림
+      4. max() : 매개변수 중 최댓값을 반환
+      5. min() : 매개변수 중 최솟값을 반환
+      6. random() : 0과 1사이의 무작위 수를 반환
+      7. round() : 매개변수의 소수점 이하 부분을 반올림
+      */
+
+      var seed = prompt("전체 응모자 수 : ", "");  // 응모자 수 입력받기
+      var picked = Math.floor((Math.random() * seed) + 1);  // 무작위 수 뽑기
+
+      document.write("전체 응모자 수 : " + seed + "명");
+      document.write("<br>");
+      document.write("당첨자 : " + picked + "번");
+    </script>
+  </body>
+</html>

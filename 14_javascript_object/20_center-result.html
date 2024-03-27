@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Window 객체</title>
+</head>
+<body>
+    <p>문서를 열면 팝업 창이 표시됩니다</p>
+    <script>
+      /* screen 객체를 이용해서 팝업을 화면 중앙에 배치하기
+      
+      전체 화면 너비에서 팝업 창의 너비를 빼면 여백 공간이 나온다. 이 값을 반으로 나누면 팝업의 시작 위치를 지정해 줄 수 있음.
+      높이도 마찬가지로 적용.
+      */
+
+      function openCenter(doc, win, w, h) {  // doc: 중앙에 위치시킬 웹 문서(팝업), win: 팝업 창 이름, w: 팝업 창 너비, h: 팝업 창 높이
+        var left = (screen.availWidth-w) / 2;  // 팝업 창의 왼쪽 좌표
+        var top = (screen.availHeight-h) / 2;   // 팝업 창의 위쪽 좌표 
+        var opt = "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h;  // left 와 top 으로 위치 지정
+        window.open(doc, win, opt);
+      }
+      openCenter("11_notice.html", "pop", 500, 400);
+    </script>
+</body>
+</html> 

@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Window 객체</title>
+</head>
+<body>
+  <p>문서를 열면 팝업 창이 표시됩니다</p>
+  <script>
+    /* window 객체: 웹 브라우저의 상태를 제어하는 객체. 모든 객체의 최상위.
+    팝업 관련 매서드: open(경로, 창 이름, 창 옵션)
+      - 경로: 팝업 창에 표시할 문서나 사이트의 경로(주소)
+      - 창 이름: 팝업 창의 이름을 지정하면 항상 이창에 팝업 내용 표시. 이름을 지정하지 않으면 새로운 팝업 창을 계속 생성.
+      - 창 옵션: left, top 속성을 이용해 위치 지정, width, height 속성을 사용해 크기 지정. default 위치는 화면 맨 왼쪽 위.
+     */
+    window.open("11_notice.html", "", "width=500, height=400");
+  </script>
+</body>
+</html> 

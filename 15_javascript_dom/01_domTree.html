@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Tree 알아보기</title>
+</head>
+<body>
+  <h1>Do it!</h1>
+  <img src="images/doit.jpg" alt="공부하는 이미지">
+</body>
+</html>
+
+
+
+
+
+<!-- 
+문서 객체 모델(DOM)의 정의
+  - 자바 스크립트를 이용하여 웹 문서에 접근하고 제어할 수 있도록 객체를 사용해 웹 문서를 체계적으로 정리하는 방법.
+
+DOM 트리
+  - 웹 문서가 DOM으로 표현되는 구조
+  - DOM은 웹 문서를 부모 요소와 자식 요소로 구분
+
+DOM을 구성하는 기본 원칙
+  - 모든 HTML 태그는 요소(element) 노드
+  - HTML 태그에서 사용하는 텍스트 내용은 자식 노드인 텍스트(text) 노드
+  - HTML 태그에 있는 속서은 자식 노드인 속성(attribute) 노드
+  - 주석은 주석(comment) 노드
+
+DOM 트리 예시
+  - root: html
+      |____ attribute: lang="ko"
+      |---- element: head
+                |---- element: meta
+                          |---- attribute: charset="UTF-8"
+                |---- element: title
+                          |---- text: DOM Tree 알아보기
+      |---- element: body
+                |---- element: h1
+                          |---- text: Do it!
+                |---- element: img
+                          |---- attribute: src="images/doit.jpg"
+                          |---- attribute: alt="공부하는 이미지"
+
+ -->
