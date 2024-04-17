@@ -1,0 +1,5 @@
+Node.js is an open-source, cross-platform JavaScript runtime environment.
+Node.js는 Chrome V8 JavaScript 엔진으로 빌드된 JavaScript 런타임입니다.
+
+Windows - "C:\Users\rhinotck\Desktop\tuchongkim\projects\web-study\node-js\basics\03\example.txt"
+Linux & MacOS - "/home/bitnami/testdir/example.txt"
