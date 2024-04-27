@@ -4,25 +4,12 @@ const asyncHandler = require("express-async-handler");
 // 데이터베이스 모델을 연결해서 사용하기 위해 모델을 import
 const Contact = require("../models/contactModel");
 
-/*
-// async-handler를 사용하지 않는 경우
-const getAllContacts = async (req, res) => {
-    try {
-        res.status(200).send("Contacts Page");
-    } catch(error) {
-        res.send(error.message);
-    }
-};
-*/
-
-
-/* async-handler를 사용하는 경우 */
 
 // @desc Get all contacts
 // @route GET /contacts
 const getAllContacts = asyncHandler(async (req, res) => {
     const contacts = await Contact.find();
-    res.status(200).send(contacts);
+    res.render("index", { contacts: contacts });  // Contact 모델에서 가져온 데이터를 contacts 변수에 저장했는데, 그 변수를 index.ejs 파일에 전달
 });
 
 // @desc Create a contact
