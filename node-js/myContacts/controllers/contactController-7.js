@@ -12,14 +12,8 @@ const getAllContacts = asyncHandler(async (req, res) => {
     res.render("index", { contacts: contacts });  // Contact 모델에서 가져온 데이터를 contacts 변수에 저장했는데, 그 변수를 index.ejs 파일에 전달
 });
 
-// @desc View add contact form
-// @route Get /contacts/add
-const addContactForm = (req, res) => {
-    res.render("add");
-};
-
 // @desc Create a contact
-// @route POST /contacts/add
+// @route POST /contacts
 const createContact = asyncHandler(async (req, res) => {
     console.log(req.body);
     const { name, email, phone } = req.body;
@@ -31,14 +25,14 @@ const createContact = asyncHandler(async (req, res) => {
         email,
         phone,
     });
-    res.redirect("/contacts");
+    res.status(201).send("Create Contacts");
 });
 
 // @desc Get contact
 // @route Get /contacts/:id
 const getContact = asyncHandler(async (req, res) => {
     const contact = await Contact.findById(req.params.id);
-    res.render("update", { contact: contact });
+    res.status(200).send(contact);
 });
 
 // @desc Update contact
@@ -51,14 +45,19 @@ const updateContact = asyncHandler(async (req, res) => {
         { name, email, phone },
         { new: true }  // 수정한 결과(도큐먼트)를 화면에 보여주고 싶을 때 사용
     );
-    res.redirect("/contacts");  // 정보가 수정된 후 전제 연락처 정보를 화면에 표시
+    res.status(200).send(updatedContact);
 });
 
 // @desc Delete contact
 // @route DELETE /contacts/:id
 const deleteContact = asyncHandler(async (req, res) => {
-    await Contact.findByIdAndDelete(req.params.id);
-    res.redirect("/contacts");
+    const contact = await Contact.findById(req.params.id);
+    if (!contact) {
+        res.status(404);
+        throw new Error("Contact not found");
+    }
+    await Contact.deleteOne();
+    res.status(200).send(`Delete Contact for ID: ${req.params.id}`);
 });
 
 module.exports = { 
@@ -67,5 +66,4 @@ module.exports = {
     getContact,
     updateContact,
     deleteContact,
-    addContactForm,
 };
