@@ -1,4 +1,4 @@
-/* EJS(Embedded Javascript) 템플릿 엔진 사용하기 */
+/* 로그인 기능 구현하기 */
 
 const express = require("express");
 const dbConnect = require("./config/dbConnect");
@@ -22,6 +22,7 @@ dbConnect();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/", require("./routes/loginRoutes"));  // 로그인 관련 라우트 모듈 등록
 app.use("/contacts", require("./routes/contactRoutes"));
 
 app.listen(port, () => {
