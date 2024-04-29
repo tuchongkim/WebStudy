@@ -1,4 +1,4 @@
-/* 로그인 기능 구현하기 */
+/* 연락처 관리 웹 애플리케이션 */
 
 const express = require("express");
 const dbConnect = require("./config/dbConnect");
@@ -17,13 +17,13 @@ app.use(express.static("./public"));
 // use method override (ex: post -> put)
 app.use(methodOverride("_method"));
 
-dbConnect();
+dbConnect();  // 몽고DB 연결
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/", require("./routes/loginRoutes"));  // 로그인 관련 라우트 모듈 등록
-app.use("/contacts", require("./routes/contactRoutes"));
+app.use("/contacts", require("./routes/contactRoutes"));  // 연락처 관련 라우트 모듈 등록
 
 app.listen(port, () => {
     console.log(`${port}번 포트에서 서버 실행 중`);
